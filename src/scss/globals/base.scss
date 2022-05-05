@@ -1,0 +1,16 @@
+:root{
+    --fz-logo:em(39);
+    --fz-title:em(50);
+    --fz-title-2:em(26);
+    --fz-a:em(14);
+    --fz-p:em(15);
+    --fz-price:em(30);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,p{
+    margin: 0;
+}

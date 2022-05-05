@@ -1,0 +1,15 @@
+@use "../utils" as *;
+@use "../globals" as *;
+
+//header
+header{
+    display: flex;
+    .header__left{
+        width: 40%;
+        .header__logo{}
+    }
+    .header__right{
+        right: 60%;
+        .header__nav{}
+    }
+}
