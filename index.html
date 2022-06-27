@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./src/css/style.css">
+    <script src="https://kit.fontawesome.com/4c13d54579.js" crossorigin="anonymous"></script>
     <title>Transports</title>
 </head>
 <body>
@@ -14,24 +17,243 @@
         </section>
         <aside class="header__right">
             <nav class="header__nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Contact</a></li>
+                <label for="toggle"><i class="fa-solid fa-bars"></i></label>
+                <input type="checkbox" id="toggle">
+                <ul class="menu">
+                    <li id="home"><a href="./index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li><a href="./pages/about.html"><i class="fa-solid fa-circle-info"></i>About</a></li>
+                    <li><a href="./pages/services.html"><i class="fa-solid fa-gears"></i>Services</a></li>
+                    <li class="dropdown">
+                        <a id="drop-btn" href="#"></span></a>
+                        <input type="checkbox" id="toggle-2" />
+                        <label for="toggle-2"><i class="fa-solid fa-file"></i>Pages</label>
+                        <ul>
+                            <li><a href="#"></i>Web icons</a></li>
+                            <li><a href="#">Short codes</a></li>
+                        </ul>
+                    <li><a href="./pages/gallery.html"><i class="fa-solid fa-image"></i>Gallery</a></li>
+                    <li><a href="./pages/contact.html"><i class="fa-solid fa-envelope"></i>Contact</a></li>
                 </ul>
             </nav>
         </aside>
     </header>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
-    <footer></footer>
+    <section class="slider">
+        <div class="slider__main">
+            <h2>The</h2>
+            <h1>INTERNATIONAL
+                AIRWAY</h1>
+            <p>Quis autem vel eum iure reprehderit.Etiam sed odio consequat tristique elit sed, molestie nulla. velit sagittis vehicula. Duis posuere</p>
+        </div>
+        <img id="left" src="./images/left-arrow.png" alt="left-slider">
+        <img id="right" src="./images/right-arrow.png" alt="right-slider">
+    </section>
+    <section class="whatwedo">
+        <section class="whatwedo__top">
+            <div class="item--1">
+                <h1>WHAT WE DO</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed odio consequat, tristique elit sed, molestie nulla. velit sagittis vehicula. Duis posuere consectetur adipiscing elit.</p>
+            </div>
+            <div class="item--2"></div>
+            <div class="item--3">
+                <div class="main">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed odio consequat, tristique elit sed, molestie nulla.</p>
+                </div>
+            </div>
+        </section>
+        <section class="whatwedo__bot">
+            <div class="item--4"></div>
+            <div class="item--5">
+                <div id="txt1">
+                    <h2>warehousing and storage</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem officiis fuga suscipit aspernatur. Minus consectetur vel quibusdam molestiae ea doloribus vero, nisi beatae id. </p>
+                </div>
+                <div id="txt2">
+                    <h2>explore our facilities</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem officiis fuga suscipit aspernatur. Minus consectetur vel quibusdam molestiae ea doloribus vero, nisi beatae id. </p>
+                </div>
+                <div id="txt3">
+                    <h2>international transport</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem officiis fuga suscipit aspernatur. Minus consectetur vel quibusdam molestiae ea doloribus vero, nisi beatae id. </p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="services">
+        <h1>Services</h1>
+        <section class="ser__main">
+            <section class="main__left">
+                <div id="left--1">
+                    <i class="fa-solid fa-truck"></i>
+                    <h2>best logictis</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam excepturi consectetur laudantium aspernatur unde eius aut totam quis corrupti pariatur at molestias</p>
+                </div>
+                <div id="left--2">
+                    <i class="fa-solid fa-lock"></i>
+                    <h2>secured service</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam excepturi consectetur laudantium aspernatur unde eius aut totam quis corrupti pariatur at molestias</p>
+                </div>
+                <div id="left--3">
+                    <i class="fa-solid fa-jet-fighter"></i>
+                    <h2>fly anywhere</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam excepturi consectetur laudantium aspernatur unde eius aut totam quis corrupti pariatur at molestias</p>
+                </div>
+            </section>
+            <section class="main__right">
+                <div id="right--1">
+                    <i class="fa-solid fa-clock"></i>
+                    <h2> fast delivery</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam excepturi consectetur laudantium aspernatur unde eius aut totam quis corrupti pariatur at molestias</p>
+                </div>
+                <div id="right--2">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <h2>packing</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam excepturi consectetur laudantium aspernatur unde eius aut totam quis corrupti pariatur at molestias</p>
+                </div>
+                <div id="right--3">
+                    <i class="fa-solid fa-house"></i>
+                    <h2>warehousing</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam excepturi consectetur laudantium aspernatur unde eius aut totam quis corrupti pariatur at molestias</p>
+                </div>
+            </section>
+        </section>
+    </section>
+    <section class="price">
+        <h1>Price-Table</h1>
+        <section class="price__main">
+            <div id="main--1">
+                <h2>Personal</h2>
+                <span>260$</span>
+                <ul>
+                    <li>Additional</li>
+                    <li>Warehousing</li>
+                    <li>Custos Borkerage</li>
+                    <li>Unlimited Transfer</li>
+                </ul>
+                <a href="#">buy now</a>
+            </div>
+            <div id="main--2">
+                <h2>professional</h2>
+                <span>150$</span>
+                <ul>
+                    <li>Additional</li>
+                    <li>Warehousing</li>
+                    <li>Custos Borkerage</li>
+                    <li>Unlimited Transfer</li>
+                </ul>
+                <a href="#">buy now</a>
+            </div>
+            <div id="main--3">
+                <h2>business</h2>
+                <span>90$</span>
+                <ul>
+                    <li>Additional</li>
+                    <li>Warehousing</li>
+                    <li>Custos Borkerage</li>
+                    <li>Unlimited Transfer</li>
+                </ul>
+                <a href="#">buy now</a>
+            </div>
+        </section>
+    </section>
+    <section class="testimonials">
+        <h1>Testimonials</h1>
+        <section class="test__main">
+            <section id="item--1">
+                <div id="top">
+                    <img src="./images/t3.jpg">
+                </div>
+                <div id="bot">
+                    <span>
+                        <p><i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, minima maiores impedit facere dolorum error aliquid saepe itaque similique veritatis ex nihil sequi suscipit, recusandae assumenda nulla excepturi esse? Quasi <i class="fa-solid fa-quote-right"></i></p>
+                    </span>
+                    <span>
+                        <h3> lois wlly</h3>
+                    </span>
+                </div>
+            </section>
+            <section id="item--2">
+                <div id="top">
+                    <img src="./images/t2.jpg">
+                </div>
+                <div id="bot">
+                    <span>
+                        <p><i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, minima maiores impedit facere dolorum error aliquid saepe itaque similique veritatis ex nihil sequi suscipit, recusandae assumenda nulla excepturi esse? Quasi <i class="fa-solid fa-quote-right"></i></p>
+                    </span>
+                    <span>
+                        <h3> lois wlly</h3>
+                    </span>
+                </div>
+            </section>
+            <section id="item--3">
+                <div id="top">
+                    <img src="./images/t3.jpg">
+                </div>
+                <div id="bot">
+                    <span>
+                        <p><i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, minima maiores impedit facere dolorum error aliquid saepe itaque similique veritatis ex nihil sequi suscipit, recusandae assumenda nulla excepturi esse? Quasi <i class="fa-solid fa-quote-right"></i></p>
+                    </span>
+                    <span>
+                        <h3> lois wlly</h3>
+                    </span>
+                </div>
+            </section>
+        </section>
+        <section class="test__bot">
+            <ol>
+                <li id="active"></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </section>
+    </section>
+    <section class="news">
+        <h1>Newsletter</h1>
+        <h2>About the best offer</h2>
+        <div id="news--email">
+            <input id="email" type="email" placeholder="Your email...">
+            <input id="button" type="button" value="Subscrible">
+        </div>
+        <p>Quis autem vel eum iure reprehderit.Etiam sed odio consequat tristique elit sed, molestie nulla. velit sagittis vehicula. Duis posuere</p>
+    </section>
+    <section class="partner">
+        <h1>Our Partners</h1>
+        <section class="main">
+            <div class="main__left">
+                <div id="item--1">
+                    <img src="./images/logo1.jpg" alt="">
+                </div>
+                <div id="item--2">
+                    <img src="./images/logo2.jpg" alt="">
+                </div>
+                <div id="item--3">
+                    <img src="./images/logo3.jpg" alt="">
+                </div>
+                <div id="item--4">
+                    <img src="./images/logo1.jpg" alt="">
+                </div>
+            </div>
+            <div class="main__right">
+                <div id="item--1">
+                    <img src="./images/logo1.jpg" alt="">
+                </div>
+                <div id="item--2">
+                    <img src="./images/logo2.jpg" alt="">
+                </div>
+                <div id="item--3">
+                    <img src="./images/logo3.jpg" alt="">
+                </div>
+                <div id="item--4">
+                    <img src="./images/logo1.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="bot">
+            <ol>
+                <li id="active"></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </section>
+    </section>
 </body>
 </html>
