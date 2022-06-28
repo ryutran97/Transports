@@ -68,10 +68,14 @@ header .header__right .header__nav .menu li {
   float: none;
   list-style-type: none;
   padding: 0.5625rem 0;
+  border-radius: 3px;
 }
 header .header__right .header__nav .menu li label {
   padding: 0;
   background-color: var(--color-bg-white);
+}
+header .header__right .header__nav .menu li a {
+  transition: color 0.5s linear;
 }
 header .header__right .header__nav .menu #home {
   background-color: var(--color-bg-blue);
@@ -110,6 +114,7 @@ header .header__right .header__nav .menu .dropdown input[type=checkbox]:checked 
 }
 header .header__right .header__nav .menu li:hover {
   background-color: var(--color-bg-blue);
+  cursor: pointer;
 }
 header .header__right .header__nav .menu li:hover a {
   color: var(--color-bg-white);
@@ -520,6 +525,11 @@ header .header__right .header__nav input[type=checkbox]:checked ~ ul {
   background-color: var(--color-bg-blue);
   width: 30%;
   border: none;
+  cursor: pointer;
+  transition: color 0.5s linear;
+}
+.news #button:hover {
+  color: var(--color-bg-black);
 }
 .news #email {
   padding: 0.625rem 1.25rem;
@@ -621,7 +631,7 @@ header .header__right .header__nav input[type=checkbox]:checked ~ ul {
   margin-bottom: 0.625rem;
 }
 
-@media only screen and (max-width: 994px) {
+@media only screen and (min-width: 994px) {
   .aboutus {
     display: flex;
   }
@@ -656,21 +666,286 @@ header .header__right .header__nav input[type=checkbox]:checked ~ ul {
 .servicespage .ser__main p {
   display: inline-block;
 }
-.servicespage .ser__main span {
+.servicespage .ser__main #item {
+  display: flex;
+  align-items: center;
+}
+.servicespage .ser__main #item div {
   width: 2.4375rem;
   height: 2.4375rem;
   padding: 0.625rem 0.625rem;
   margin-right: 1.25rem;
+  margin-bottom: 0;
   background-color: var(--color-bg-yellow);
   border-radius: 50px;
+  text-align: center;
+}
+.servicespage .ser__main #item div p {
+  margin: 0 auto;
+}
+.servicespage .ser__main #item p {
+  width: 80%;
 }
 
+.trans {
+  padding: 1.875rem 1.25rem;
+  text-align: center;
+  background-color: #efefef;
+}
+.trans h1 {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+.trans p {
+  margin: 0 auto;
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+  width: 80%;
+}
+.trans a {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+  background-color: var(--color-bg-yellow);
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.125em;
+  border: solid 2px var(--color-bg-yellow);
+  cursor: pointer;
+}
+.trans #img {
+  margin-top: 1.875rem;
+}
+.trans .trans__top #img {
+  min-height: 400px;
+  background-image: url(../../../images/bb1.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.trans .trans__bot #img {
+  min-height: 400px;
+  background-image: url(../../../images/bb2.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media only screen and (min-width: 994px) {
+  .trans .trans__top {
+    display: flex;
+    text-align: right;
+    margin-bottom: 1.875rem;
+  }
+  .trans .trans__top #text {
+    width: 60%;
+    margin-right: 1.25rem;
+  }
+  .trans .trans__top #text p {
+    margin-right: 0;
+    width: 100%;
+  }
+  .trans .trans__top #img {
+    width: 40%;
+    min-height: auto;
+  }
+  .trans .trans__bot {
+    display: flex;
+    text-align: left;
+  }
+  .trans .trans__bot #text {
+    margin-left: 1.25rem;
+    width: 60%;
+  }
+  .trans .trans__bot #text p {
+    margin-left: 0;
+    width: 100%;
+  }
+  .trans .trans__bot #img {
+    width: 40%;
+    min-height: auto;
+  }
+}
+.select {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.875rem 1.25rem;
+  text-align: center;
+}
+.select div {
+  background-color: #efefef;
+  border-bottom: 2px solid var(--color-bg-yellow);
+  margin-bottom: 1.875rem;
+  padding: 1.875rem 1.875rem;
+}
+.select div i {
+  margin-bottom: 1.25rem;
+}
+.select div h2 {
+  margin-bottom: 1.25rem;
+}
+.select .select__left {
+  width: 45%;
+}
+.select .select__right {
+  width: 45%;
+}
+
+@media only screen and (min-width: 994px) {
+  .select {
+    display: block;
+  }
+  .select .select__left {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .select .select__left div {
+    width: 30%;
+  }
+  .select .select__right {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .select .select__right div {
+    width: 30%;
+  }
+}
+#photo1 {
+  min-height: 300px;
+  background-image: url(../../../images/b1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.gal__main {
+  background-color: #efefef;
+  text-align: center;
+  padding: 1.875rem 1.25rem;
+}
+.gal__main h1 {
+  margin-bottom: 1.875rem;
+}
+.gal__main .container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 0.625em;
+}
+.gal__main .container .grid-item img {
+  width: 100%;
+}
+
+.contact__main {
+  background-color: #efefef;
+  padding: 1.875em 1.25em;
+}
+.contact__main h1 {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+.contact__main .main .main__top #text {
+  width: 100%;
+  background-color: #efefef;
+  margin-bottom: 0.625rem;
+  padding: 0.625rem;
+  border-radius: 5px;
+  border: solid 1px var(--color-bg-black);
+}
+.contact__main .main .main__top #email {
+  background-color: #efefef;
+  width: 100%;
+  margin-bottom: 0.625rem;
+  padding: 0.625rem;
+  border-radius: 5px;
+  border: solid 1px var(--color-bg-black);
+}
+.contact__main .main .main__top textarea {
+  width: 100%;
+  background-color: #efefef;
+  margin-bottom: 0.625rem;
+  padding: 0.625rem;
+  border-radius: 5px;
+  border: solid 1px var(--color-bg-black);
+}
+.contact__main .main .main__top #submit {
+  width: 100%;
+  background-color: #efefef;
+  margin-bottom: 0.625rem;
+  padding: 0.9375rem;
+  border-radius: 5px;
+  border: solid 2px var(--color-bg-black);
+  background-color: var(--color-bg-yellow);
+}
+.contact__main .main .main__top #text:hover {
+  border-color: var(--color-bg-yellow);
+  transition: border-color 0.5s linear;
+}
+.contact__main .main .main__top #email:hover {
+  border-color: var(--color-bg-yellow);
+  transition: border-color 0.5s linear;
+}
+.contact__main .main .main__top textarea:hover {
+  border-color: var(--color-bg-yellow);
+  transition: border-color 0.5s linear;
+}
+.contact__main .main .main__top #submit:hover {
+  animation: doimau 1s both;
+}
+@keyframes doimau {
+  0% {
+    background-color: var(--color-bg-yellow);
+    border: solid 2px var(--color-bg-black);
+  }
+  100% {
+    background-color: var(--color-bg-black);
+    color: var(--color-bg-white);
+    border: solid 2px var(--color-bg-yellow);
+  }
+}
+.contact__main .main .main__bot {
+  padding: 1.875rem;
+}
+.contact__main .main .main__bot h2 {
+  margin-bottom: 1.875rem;
+}
+.contact__main .main .main__bot #item {
+  margin-bottom: 1.25rem;
+}
+.contact__main .main .main__bot #item i {
+  margin-bottom: 0.625rem;
+  margin: auto 0;
+}
+.contact__main .main .main__bot #item p {
+  margin-bottom: 0.625rem;
+}
+.contact__main .main .main__bot #item #icon {
+  background-color: var(--color-bg-yellow);
+  width: 2.4375rem;
+  height: 2.4375rem;
+  padding: 0.625rem 0.625rem;
+  border-radius: 50px;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+@media only screen and (min-width: 994px) {
+  .contact__main .main {
+    display: flex;
+    justify-content: space-around;
+  }
+  .contact__main .main .main__bot {
+    padding: 0rem;
+    width: 45%;
+  }
+  .contact__main .main .main__top {
+    width: 45%;
+  }
+}
 header .header__left .header__logo {
   text-decoration: none;
   color: var(--color-bg-blue);
   font-size: 2.4375em;
   text-transform: uppercase;
-  letter-spacing: 0.125rem;
+  letter-spacing: 0.125em;
   font-weight: 600;
   text-shadow: 2px 2px 0px rgba(74, 76, 76, 0.13);
 }
@@ -712,7 +987,7 @@ header .header__right .header__nav .menu .dropdown ul li:hover label {
   font-size: 1.25em;
   font-weight: 200;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.125em;
 }
 .slider .slider__main h1 {
   font-size: 2.5em;
@@ -723,7 +998,7 @@ header .header__right .header__nav .menu .dropdown ul li:hover label {
   font-size: 0.875em;
   font-weight: 100;
   line-height: 1.25em;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625em;
 }
 
 .whatwedo .whatwedo__top .item--1 h1 {
@@ -738,7 +1013,7 @@ header .header__right .header__nav .menu .dropdown ul li:hover label {
   font-size: 0.875em;
   font-weight: 100;
   line-height: 1.25em;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625em;
 }
 .whatwedo .whatwedo__bot .item--5 {
   background-color: var(--color-bg-blue);
@@ -752,7 +1027,7 @@ header .header__right .header__nav .menu .dropdown ul li:hover label {
 .whatwedo .whatwedo__bot .item--5 p {
   color: var(--color-text-black);
   font-size: 0.875em;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625em;
   line-height: 1.25em;
   font-weight: 100;
 }
@@ -767,13 +1042,13 @@ header .header__right .header__nav .menu .dropdown ul li:hover label {
   .whatwedo .whatwedo__top .item--1 p {
     color: var(--color-text-black);
     font-size: 0.875em;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625em;
     line-height: 1.75em;
     font-weight: 100;
   }
   .whatwedo .whatwedo__top .item--3 .main p {
     font-size: 0.875em;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625em;
     line-height: 1.8125em;
     font-weight: 100;
   }
@@ -791,11 +1066,11 @@ header .header__right .header__nav .menu .dropdown ul li:hover label {
 .services p {
   color: var(--color-text-black);
   font-size: 0.875em;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625em;
 }
 .services div i {
   font-size: 2em;
-  -webkit-transition: color 0.75s linear;
+  transition: color 0.75s linear;
 }
 .services div:hover i {
   color: var(--color-bg-white);
@@ -804,12 +1079,12 @@ header .header__right .header__nav .menu .dropdown ul li:hover label {
 .services h1 {
   font-size: 2.8125em;
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625em;
 }
 .services h2 {
   font-size: 1.1875em;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 0.125em;
   text-transform: uppercase;
 }
 
@@ -818,7 +1093,7 @@ header .header__right .header__nav .menu .dropdown ul li:hover label {
   color: var(--color-text-white);
   text-transform: uppercase;
   font-size: 0.8125em;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625em;
   font-weight: 500;
   transition: 0.5s ease-in;
 }
@@ -830,18 +1105,18 @@ header .header__right .header__nav .menu .dropdown ul li:hover label {
 .price h1 {
   font-size: 2.625em;
   font-weight: 300;
-  letter-spacing: 3px;
+  letter-spacing: 0.1875em;
   text-transform: capitalize;
 }
 .price h2 {
   font-size: 1.1875em;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625em;
   text-transform: uppercase;
 }
 .price span {
   font-size: 1.375em;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625em;
   color: var(--color-bg-blue);
 }
 .price #main--2 span {
@@ -854,14 +1129,14 @@ header .header__right .header__nav .menu .dropdown ul li:hover label {
 
 .testimonials h1 {
   font-size: 2.625em;
-  letter-spacing: 3px;
+  letter-spacing: 0.1875em;
   font-weight: 300;
   text-transform: capitalize;
   color: var(--color-bg-white);
 }
 .testimonials p {
   font-size: 0.8125em;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625em;
   line-height: 1.5em;
   text-transform: uppercase;
 }
@@ -880,13 +1155,13 @@ header .header__right .header__nav .menu .dropdown ul li:hover label {
 @media only screen and (min-width: 994px) {
   .testimonials p {
     font-size: 1em;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625em;
     line-height: 1.75em;
     text-transform: uppercase;
   }
   .testimonials h3 {
     font-size: 1.25em;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625em;
     font-weight: 500;
     text-transform: uppercase;
   }
@@ -898,41 +1173,42 @@ header .header__right .header__nav .menu .dropdown ul li:hover label {
   font-size: 2.625em;
   font-weight: 300;
   text-transform: capitalize;
-  letter-spacing: 0.1875rem;
+  letter-spacing: 0.1875em;
 }
 .news h2 {
   font-size: 1.4375em;
   text-transform: uppercase;
-  letter-spacing: 0.125rem;
+  letter-spacing: 0.125em;
   color: var(--color-bg-blue);
 }
 .news #button {
   font-size: 0.9375em;
-  letter-spacing: 0.125rem;
+  letter-spacing: 0.125em;
   color: var(--color-bg-white);
   font-weight: 700;
 }
 .news p {
   font-size: 0.875em;
-  letter-spacing: 0.0625rem;
+  letter-spacing: 0.0625em;
 }
 
 .partner h1 {
   font-size: 2.625em;
   font-weight: 300;
   text-transform: capitalize;
-  letter-spacing: 0.1875rem;
+  letter-spacing: 0.1875em;
   color: var(--color-bg-white);
 }
+
 .about__main h1 {
   font-size: 2.625em;
   font-weight: 300;
   text-transform: capitalize;
-  letter-spacing: 0.1875rem;
+  letter-spacing: 0.1875em;
 }
 .about__main #main span {
   font-size: 0.9375em;
-  letter-spacing: 0.125rem;
+  letter-spacing: 0.125em;
 }
 .about__main #main span i {
   color: var(--color-bg-blue);
@@ -955,6 +1231,136 @@ header .header__right .header__nav .menu .dropdown ul li:hover label {
   letter-spacing: 0.125em;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.servicespage h1 {
+  font-size: 2.625em;
+  font-weight: 300;
+  text-transform: capitalize;
+  letter-spacing: 0.1875rem;
+}
+.servicespage .ser__main #item div p {
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 0.1875rem;
+  color: var(--color-bg-white);
+  line-height: 0;
+}
+.servicespage .ser__main #item p {
+  font-size: 1em;
+  font-weight: 200;
+  letter-spacing: 0.1875rem;
+  line-height: 2.125em;
+}
+
+.trans h1 {
+  font-size: 1.375em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
+  color: var(--color-bg-blue);
+}
+.trans p {
+  font-size: 0.875em;
+  letter-spacing: 0.0625em;
+  line-height: 1.8125em;
+  color: var(--color-bg-black);
+}
+.trans a {
+  text-decoration: none;
+  color: var(--color-text-white);
+  transition: color 1s linear;
+}
+.trans a:hover {
+  background-color: var(--color-bg-white);
+  color: var(--color-bg-black);
+}
+.select div i {
+  font-size: 2.625em;
+  color: #666666;
+  transition: color 0.5s linear;
+}
+.select div h2 {
+  font-size: 1.0625em;
+  font-weight: 600;
+  letter-spacing: 0.0625em;
+  color: var(--color-bg-yellow);
+  text-transform: uppercase;
+  transition: color 0.5s linear;
+}
+.select div p {
+  font-size: 0.875em;
+  letter-spacing: 0.09375em;
+  line-height: 1.5625em;
+  color: #666666;
+}
+.select div:hover {
+  background-color: var(--color-bg-yellow);
+}
+.select div:hover i {
+  color: var(--color-bg-blue);
+}
+.select div:hover h2 {
+  color: var(--color-bg-white);
+}
+
+.gal__main h1 {
+  font-size: 2.625em;
+  font-weight: 300;
+  text-transform: capitalize;
+  letter-spacing: 0.1875em;
+  line-height: 1.1;
+}
+.gal__main .container .grid-item img:hover {
+  transform: scale(1.2);
+  transition-timing-function: ease-in-out;
+  transition-duration: 750ms;
+}
+
+.contact__main h1 {
+  font-size: 2.625em;
+  font-weight: 300;
+  text-transform: capitalize;
+  letter-spacing: 0.1875em;
+  line-height: 1.1;
+}
+.contact__main #text {
+  font-size: 0.875em;
+  text-transform: capitalize;
+  letter-spacing: 0.0625em;
+}
+.contact__main #email {
+  font-size: 0.875em;
+  text-transform: capitalize;
+  letter-spacing: 0.0625em;
+}
+.contact__main textarea {
+  font-size: 0.875em;
+  text-transform: capitalize;
+  letter-spacing: 0.0625em;
+}
+.contact__main #submit {
+  font-size: 0.9375em;
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
+  color: var(--color-bg-white);
+}
+.contact__main h2 {
+  font-size: 1.5625em;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
+  line-height: 1.1;
+}
+.contact__main i {
+  color: var(--color-bg-white);
+  font-size: 1.1875em;
+  letter-spacing: 0.0625em;
+}
+.contact__main p {
+  font-size: 0.875em;
+  font-weight: 300;
+  letter-spacing: 0.0625em;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -9,7 +9,7 @@ header{
             color: var(--color-bg-blue);
             font-size: em(39);
             text-transform: uppercase;
-            letter-spacing: rem(2);
+            letter-spacing: em(2);
             font-weight: 600;
             text-shadow:2px 2px 0px rgb(74 76 76 / 13%) ;
             // font-size: var(--fz-logo);
@@ -73,7 +73,7 @@ header{
             font-size: em(20);
             font-weight: 200;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: em(2);
         }
         h1{
             font-size: em(40);
@@ -84,7 +84,7 @@ header{
             font-size: em(14);
             font-weight: 100;
             line-height: em(20);
-            letter-spacing: 1px;
+            letter-spacing: em(1);
         }
     }
 }
@@ -105,7 +105,7 @@ header{
                 font-size: em(14);
                 font-weight: 100;
                 line-height: em(20);
-                letter-spacing: 1px;
+                letter-spacing: em(1);
             }
         }
     }
@@ -121,7 +121,7 @@ header{
             p{
                 color: var(--color-text-black);
                 font-size: em(14);
-                letter-spacing: 1px;
+                letter-spacing: em(1);
                 line-height: em(20);
                 font-weight: 100;
             }
@@ -143,7 +143,7 @@ header{
                 p{
                     color: var(--color-text-black);
                     font-size: em(14);
-                    letter-spacing: 1px;
+                    letter-spacing: em(1);
                     line-height: em(28);
                     font-weight: 100;
                 }
@@ -154,7 +154,7 @@ header{
                 .main{
                     p{
                         font-size: em(14);
-                        letter-spacing: 1px;
+                        letter-spacing: em(1);
                         line-height: em(29);
                         font-weight: 100;
                     }
@@ -185,12 +185,12 @@ header{
     p{
          color: var(--color-text-black);
          font-size: em(14);
-         letter-spacing: 1px;
+         letter-spacing: em(1);
     }
     div{
         i{
             font-size: em(32);
-            -webkit-transition: color 0.75s linear;
+            transition: color 0.75s linear;
         }
     }
     div:hover{
@@ -202,12 +202,12 @@ header{
     h1{
         font-size: em(45);
         font-weight: 500;
-        letter-spacing: 1px;
+        letter-spacing: em(1);
     }
     h2{
         font-size:em(19);
         font-weight: 500;
-        letter-spacing: 2px;
+        letter-spacing: em(2);
         text-transform: uppercase;
     }
 }
@@ -219,7 +219,7 @@ header{
         color: var(--color-text-white);
         text-transform: uppercase;
         font-size: em(13);
-        letter-spacing: 1px;
+        letter-spacing: em(1);
         font-weight: 500;
         transition: 0.5s ease-in;
     }
@@ -231,18 +231,18 @@ header{
     h1{
         font-size: em(42);
         font-weight: 300;
-        letter-spacing: 3px;
+        letter-spacing: em(3);
         text-transform: capitalize;
     }
     h2{
         font-size: em(19);
         font-weight: 600;
-        letter-spacing: 1px;
+        letter-spacing: em(1);
         text-transform: uppercase;
     }
     span{
         font-size: em(22);
-        letter-spacing: 1px;
+        letter-spacing: em(1);
         color: var(--color-bg-blue);
     }
     #main--2{
@@ -260,14 +260,14 @@ header{
 .testimonials{
     h1{
         font-size: em(42);
-        letter-spacing: 3px;
+        letter-spacing: em(3);
         font-weight: 300;
         text-transform: capitalize;
         color: var(--color-bg-white);
     }
     p{
         font-size: em(13);
-        letter-spacing: 1px;
+        letter-spacing: em(1);
         line-height: em(24);
         text-transform: uppercase;
     }
@@ -288,13 +288,13 @@ header{
     .testimonials{
         p{
             font-size: em(16);
-            letter-spacing: 1px;
+            letter-spacing: em(1);
             line-height: em(28);
             text-transform: uppercase;
         }
         h3{
             font-size: em(20);
-            letter-spacing: 1px;
+            letter-spacing: em(1);
             font-weight: 500;
             text-transform: uppercase;
         }
@@ -309,23 +309,23 @@ header{
         font-size: em(42);
         font-weight: 300;
         text-transform: capitalize;
-        letter-spacing: rem(3);
+        letter-spacing: em(3);
     }
     h2{
         font-size: em(23);
         text-transform: uppercase;
-        letter-spacing: rem(2);
+        letter-spacing: em(2);
         color: var(--color-bg-blue);
     }
     #button{
         font-size: em(15);
-        letter-spacing: rem(2);
+        letter-spacing: em(2);
         color: var(--color-bg-white);
         font-weight: 700;
     }
     p{
         font-size: em(14);
-        letter-spacing: rem(1)
+        letter-spacing: em(1)
     }
 }
 
@@ -335,22 +335,8 @@ header{
         font-size: em(42);
         font-weight: 300;
         text-transform: capitalize;
-        letter-spacing: rem(3);
+        letter-spacing: em(3);
         color: var(--color-bg-white);
-    }
-    .main{
-        .main__left{
-        }
-        .main__right{
-       }
-    }
-    .bot{
-        ol{
-            li{
-            }
-            #active{
-            }
-        }
     }
 }
 
@@ -360,12 +346,12 @@ header{
         font-size: em(42);
         font-weight: 300;
         text-transform: capitalize;
-        letter-spacing: rem(3);
+        letter-spacing: em(3);
     }
     #main{
         span{
             font-size: em(15);
-            letter-spacing: rem(2);
+            letter-spacing: em(2);
             i{
                 color: var(--color-bg-blue);
             }
@@ -394,3 +380,165 @@ header{
     }
 }
 
+//servicepage
+.servicespage{
+    h1{
+        font-size: em(42);
+        font-weight: 300;
+        text-transform: capitalize;
+        letter-spacing: rem(3);
+    }
+    .ser__main{
+        #item{
+            div{
+                p{
+                    font-size: em(16);
+                    font-weight: 300;
+                    letter-spacing: rem(3);
+                    color: var(--color-bg-white);
+                    line-height: 0;
+                }
+            }
+            p{
+                font-size: em(16);
+                font-weight: 200;
+                letter-spacing: rem(3);
+                line-height: em(34);
+            }
+        }
+    }
+}
+
+//trans
+.trans{
+    h1{
+        font-size: em(22);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: em(1);
+        color: var(--color-bg-blue);
+    }
+    p{
+        font-size: em(14);
+        letter-spacing: em(1);
+        line-height: em(29);
+        color: var(--color-bg-black);
+    }
+    a{
+        text-decoration: none;
+        color: var(--color-text-white);
+        transition: color 1s linear;
+    }
+    a:hover{
+        background-color: var(--color-bg-white);
+        color: var(--color-bg-black);
+    }
+    .trans__top{
+    }
+}
+
+//select
+.select{
+    div{
+        i{
+            font-size: em(42);
+            color: #666666;
+            transition: color 0.5s linear;
+        }
+        h2{
+            font-size: em(17);
+            font-weight: 600;
+            letter-spacing: em(1);
+            color: var(--color-bg-yellow);
+            text-transform: uppercase;
+            transition: color 0.5s linear;
+        }
+        p{
+            font-size: em(14);
+            letter-spacing: em(1.5);
+            line-height: em(25);
+            color: #666666;
+
+        }
+    }
+    div:hover{
+        background-color: var(--color-bg-yellow);
+        i{
+            color: var(--color-bg-blue);
+        }
+        h2{
+            color: var(--color-bg-white);
+        }
+    }
+}
+
+//gallery
+.gal__main{
+    h1{
+        font-size: em(42);
+        font-weight: 300;
+        text-transform: capitalize;
+        letter-spacing: em(3);
+        line-height: 1.1;
+    }
+    .container{
+        .grid-item{
+            img:hover{
+                transform: scale(1.2);
+                transition-timing-function: ease-in-out;
+                transition-duration: 750ms;
+            }
+        }
+    }
+}
+
+
+//contractpage
+.contact__main{
+    h1{
+        font-size: em(42);
+        font-weight: 300;
+        text-transform: capitalize;
+        letter-spacing: em(3);
+        line-height: 1.1;
+    }
+    #text{
+        font-size: em(14);
+        text-transform: capitalize;
+        letter-spacing: em(1);
+    }
+    #email{
+        font-size: em(14);
+        text-transform: capitalize;
+        letter-spacing: em(1);
+    }
+    textarea{
+        font-size: em(14);
+        text-transform: capitalize;
+        letter-spacing: em(1);
+    }
+    #submit{
+        font-size: em(15);
+        text-transform: uppercase;
+        letter-spacing: em(1);
+        color: var(--color-bg-white);
+    }
+    h2{
+        font-size: em(25);
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: em(1);
+        line-height: 1.1;
+    }
+    i{
+        color: var(--color-bg-white);
+        font-size: em(19);
+        letter-spacing: em(1);
+        // line-height: em(19);
+    }
+    p{
+        font-size: em(14);
+        font-weight: 300;
+        letter-spacing: em(1);
+    }
+}
