@@ -32,7 +32,7 @@ header{
                         color: var(--color-text-black);
                     }
                 }
-                #home{
+                .home{
                     a{
                         color: var(--color-text-white);
                     }
@@ -317,7 +317,7 @@ header{
         letter-spacing: em(2);
         color: var(--color-bg-blue);
     }
-    #button{
+    .button{
         font-size: em(15);
         letter-spacing: em(2);
         color: var(--color-bg-white);
@@ -326,6 +326,9 @@ header{
     p{
         font-size: em(14);
         letter-spacing: em(1)
+    }
+    .email{
+        color: var(--color-bg-white);
     }
 }
 

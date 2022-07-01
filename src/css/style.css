@@ -77,7 +77,7 @@ header .header__right .header__nav .menu li label {
 header .header__right .header__nav .menu li a {
   transition: color 0.5s linear;
 }
-header .header__right .header__nav .menu #home {
+header .header__right .header__nav .menu .home {
   background-color: var(--color-bg-blue);
 }
 header .header__right .header__nav .menu .dropdown {
@@ -113,8 +113,8 @@ header .header__right .header__nav .menu .dropdown input[type=checkbox]:checked 
   display: block;
 }
 header .header__right .header__nav .menu li:hover {
-  background-color: var(--color-bg-blue);
   cursor: pointer;
+  background-color: var(--color-bg-blue);
 }
 header .header__right .header__nav .menu li:hover a {
   color: var(--color-bg-white);
@@ -155,11 +155,19 @@ header .header__right .header__nav input[type=checkbox]:checked ~ ul {
   }
   header .header__right .header__nav .menu i {
     display: inline;
+    margin-right: 0.3125rem;
   }
   header .header__right .header__nav .menu li {
-    margin-left: 1.25rem;
-    padding: 1.25rem 0.625rem;
+    margin-right: 0.3125rem;
     float: left;
+    padding: 0;
+  }
+  header .header__right .header__nav .menu li a {
+    display: inline-block;
+    padding: 1.25rem 1.25rem;
+  }
+  header .header__right .header__nav .menu li a p {
+    display: inline;
   }
   header .header__right .header__nav .menu .dropdown {
     display: none;
@@ -193,36 +201,117 @@ header .header__right .header__nav input[type=checkbox]:checked ~ ul {
   }
 }
 .slider {
-  background-image: url(../../../images/b1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 6.25rem 1.25rem;
   position: relative;
-}
-.slider .slider__main {
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
 }
-.slider .slider__main h1 {
-  width: 60%;
+.slider .slider__wraper {
+  overflow: hidden;
+  position: relative;
 }
-.slider .slider__main p {
+.slider .slider__wraper .slider__main {
+  display: flex;
+  transition: 900ms ease-in-out 0s;
+}
+.slider .slider__wraper .slider__main .item {
+  width: 100%;
+  position: relative;
+  flex: 1 0 100%;
+}
+.slider .slider__wraper .slider__main .item img {
+  width: 100%;
+  height: 100%;
+}
+.slider .slider__wraper .slider__main .item p {
   width: 70%;
+  position: absolute;
+  top: 60%;
+  left: 10%;
 }
-.slider #left {
+.slider .slider__wraper .slider__main .item h2 {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+.slider .slider__wraper .slider__main .item h1 {
+  position: absolute;
+  top: 27%;
+  left: 10%;
+}
+.slider .left {
   width: 5%;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
   left: 0;
+  cursor: pointer;
 }
-.slider #right {
+.slider .right {
   width: 5%;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
   right: 0;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 555px) {
+  .slider .slider__wraper .slider__main .item p {
+    width: 70%;
+    position: absolute;
+    top: 45%;
+    left: 10%;
+  }
+  .slider .slider__wraper .slider__main .item h2 {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+  }
+  .slider .slider__wraper .slider__main .item h1 {
+    position: absolute;
+    top: 27%;
+    left: 10%;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .slider .slider__wraper .slider__main .item p {
+    width: 70%;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+  }
+  .slider .slider__wraper .slider__main .item h2 {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+  }
+  .slider .slider__wraper .slider__main .item h1 {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+  }
+}
+@media only screen and (min-width: 994px) {
+  .slider .slider__wraper .slider__main .item p {
+    width: 70%;
+    position: absolute;
+    top: 55%;
+    left: 10%;
+  }
+  .slider .slider__wraper .slider__main .item h2 {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+  }
+  .slider .slider__wraper .slider__main .item h1 {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+  }
+}
+.active--slide {
+  transition: 1.5s;
+  opacity: 1;
 }
 
 .whatwedo {
@@ -452,19 +541,24 @@ header .header__right .header__nav input[type=checkbox]:checked ~ ul {
 .testimonials h1 {
   margin-bottom: 1.875rem;
 }
-.testimonials .test__main #item--2 {
-  display: none;
+.testimonials .test__wapper {
+  position: relative;
+  overflow: hidden;
 }
-.testimonials .test__main #item--3 {
-  display: none;
+.testimonials .test__wapper .test__main {
+  display: flex;
+  transition: 900ms ease-in-out 0s;
 }
-.testimonials .test__main img {
+.testimonials .test__wapper .test__main .item {
+  flex: 1 0 100%;
+}
+.testimonials .test__wapper .test__main img {
   margin-bottom: 1.25rem;
 }
-.testimonials .test__main h3 {
+.testimonials .test__wapper .test__main h3 {
   text-align: left;
 }
-.testimonials .test__main p {
+.testimonials .test__wapper .test__main p {
   text-align: left;
   margin-bottom: 1.25rem;
 }
@@ -482,22 +576,20 @@ header .header__right .header__nav input[type=checkbox]:checked ~ ul {
   width: 0.75rem;
   height: 0.75rem;
 }
-.testimonials .test__bot ol #active {
+.testimonials .test__bot ol .test--active {
   background-color: var(--color-bg-blue);
 }
 
 @media only screen and (min-width: 994px) {
   .testimonials {
     padding: 1.875rem 6.25rem;
+    text-align: center;
   }
-  .testimonials #item--1 {
-    display: flex;
+  .testimonials .test__wapper .test__main h3 {
+    text-align: center;
   }
-  .testimonials #top {
-    margin-right: 1.875rem;
-  }
-  .testimonials p {
-    width: 80%;
+  .testimonials .test__wapper .test__main p {
+    text-align: center;
   }
 }
 .news {
@@ -520,7 +612,7 @@ header .header__right .header__nav input[type=checkbox]:checked ~ ul {
 .news p {
   padding: 0 3.125rem;
 }
-.news #button {
+.news .button {
   padding: 0.625rem 1.25rem;
   background-color: var(--color-bg-blue);
   width: 30%;
@@ -528,10 +620,10 @@ header .header__right .header__nav input[type=checkbox]:checked ~ ul {
   cursor: pointer;
   transition: color 0.5s linear;
 }
-.news #button:hover {
+.news button:hover {
   color: var(--color-bg-black);
 }
-.news #email {
+.news .email {
   padding: 0.625rem 1.25rem;
   width: 69%;
   background-color: var(--color-bg-black);
@@ -546,23 +638,20 @@ header .header__right .header__nav input[type=checkbox]:checked ~ ul {
 .partner h1 {
   margin-bottom: 1.875rem;
 }
-.partner .main .main__left {
+.partner .partner__wapper {
+  position: relative;
+  overflow: hidden;
+}
+.partner .partner__wapper .partner__main {
   display: flex;
-  justify-content: center;
+  transition: 900ms ease-in-out 0s;
+}
+.partner .partner__wapper .partner__main .item {
+  flex: 1 0 100%;
+  display: flex;
+  justify-content: space-around;
   width: 100%;
   margin: 0 auto;
-}
-.partner .main .main__left div {
-  width: 100%;
-  margin-left: 1.25rem;
-}
-.partner .main .main__left div img {
-  width: 100%;
-}
-.partner .main .main__right {
-  display: flex;
-  display: none;
-  justify-content: space-around;
 }
 .partner .bot ol {
   text-align: center;
@@ -578,7 +667,7 @@ header .header__right .header__nav input[type=checkbox]:checked ~ ul {
   width: 0.75rem;
   height: 0.75rem;
 }
-.partner .bot ol #active {
+.partner .bot ol .partner--active {
   background-color: var(--color-bg-white);
 }
 
@@ -677,7 +766,7 @@ header .header__right .header__nav input[type=checkbox]:checked ~ ul {
   margin-right: 1.25rem;
   margin-bottom: 0;
   background-color: var(--color-bg-yellow);
-  border-radius: 50px;
+  border-radius: 50%;
   text-align: center;
 }
 .servicespage .ser__main #item div p {
@@ -922,7 +1011,7 @@ header .header__right .header__nav input[type=checkbox]:checked ~ ul {
   width: 2.4375rem;
   height: 2.4375rem;
   padding: 0.625rem 0.625rem;
-  border-radius: 50px;
+  border-radius: 50%;
   text-align: center;
   margin-bottom: 1.25rem;
 }
@@ -961,7 +1050,7 @@ header .header__right .header__nav .menu li a {
   text-decoration: none;
   color: var(--color-text-black);
 }
-header .header__right .header__nav .menu #home a {
+header .header__right .header__nav .menu .home a {
   color: var(--color-text-white);
 }
 header .header__right .header__nav .menu .dropdown {
@@ -1181,7 +1270,7 @@ header .header__right .header__nav .menu .dropdown ul li:hover label {
   letter-spacing: 0.125em;
   color: var(--color-bg-blue);
 }
-.news #button {
+.news .button {
   font-size: 0.9375em;
   letter-spacing: 0.125em;
   color: var(--color-bg-white);
@@ -1190,6 +1279,9 @@ header .header__right .header__nav .menu .dropdown ul li:hover label {
 .news p {
   font-size: 0.875em;
   letter-spacing: 0.0625em;
+}
+.news .email {
+  color: var(--color-bg-white);
 }
 
 .partner h1 {

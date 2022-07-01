@@ -20,9 +20,9 @@
                 <label for="toggle"><i class="fa-solid fa-bars"></i></label>
                 <input type="checkbox" id="toggle">
                 <ul class="menu">
-                    <li id="home"><a href="../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li><a href="../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
                     <li><a href="./about.html"><i class="fa-solid fa-circle-info"></i>About</a></li>
-                    <li><a href="./services.html"><i class="fa-solid fa-gears"></i>Services</a></li>
+                    <li class="home"><a href="./services.html"><i class="fa-solid fa-gears"></i>Services</a></li>
                     <li class="dropdown">
                         <a id="drop-btn" href="#"></span></a>
                         <input type="checkbox" id="toggle-2" />
@@ -122,52 +122,54 @@
     </section>
     <section class="testimonials">
         <h1>Testimonials</h1>
-        <section class="test__main">
-            <section id="item--1">
-                <div id="top">
-                    <img src="../images/t1.jpg">
+        <div class="test__wapper">
+            <section class="test__main">
+                <div class="item">
+                    <div id="top">
+                        <img src="../images/t1.jpg">
+                    </div>
+                    <div id="bot">
+                        <span>
+                            <p><i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, minima maiores impedit facere dolorum error aliquid saepe itaque similique veritatis ex nihil sequi suscipit, recusandae assumenda nulla excepturi esse? Quasi <i class="fa-solid fa-quote-right"></i></p>
+                        </span>
+                        <span>
+                            <h3> lois wlly</h3>
+                        </span>
+                    </div>
                 </div>
-                <div id="bot">
-                    <span>
-                        <p><i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, minima maiores impedit facere dolorum error aliquid saepe itaque similique veritatis ex nihil sequi suscipit, recusandae assumenda nulla excepturi esse? Quasi <i class="fa-solid fa-quote-right"></i></p>
-                    </span>
-                    <span>
-                        <h3> lois wlly</h3>
-                    </span>
+                <div class="item">
+                    <div id="top">
+                        <img src="../images/t2.jpg">
+                    </div>
+                    <div id="bot">
+                        <span>
+                            <p><i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, minima maiores impedit facere dolorum error aliquid saepe itaque similique veritatis ex nihil sequi suscipit, recusandae assumenda nulla excepturi esse? Quasi <i class="fa-solid fa-quote-right"></i></p>
+                        </span>
+                        <span>
+                            <h3> lois wlly</h3>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div id="top">
+                        <img src="../images/t3.jpg">
+                    </div>
+                    <div id="bot">
+                        <span>
+                            <p><i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, minima maiores impedit facere dolorum error aliquid saepe itaque similique veritatis ex nihil sequi suscipit, recusandae assumenda nulla excepturi esse? Quasi <i class="fa-solid fa-quote-right"></i></p>
+                        </span>
+                        <span>
+                            <h3> lois wlly</h3>
+                        </span>
+                    </div>
                 </div>
             </section>
-            <section id="item--2">
-                <div id="top">
-                    <img src="../images/t2.jpg">
-                </div>
-                <div id="bot">
-                    <span>
-                        <p><i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, minima maiores impedit facere dolorum error aliquid saepe itaque similique veritatis ex nihil sequi suscipit, recusandae assumenda nulla excepturi esse? Quasi <i class="fa-solid fa-quote-right"></i></p>
-                    </span>
-                    <span>
-                        <h3> lois wlly</h3>
-                    </span>
-                </div>
-            </section>
-            <section id="item--3">
-                <div id="top">
-                    <img src="../images/t3.jpg">
-                </div>
-                <div id="bot">
-                    <span>
-                        <p><i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, minima maiores impedit facere dolorum error aliquid saepe itaque similique veritatis ex nihil sequi suscipit, recusandae assumenda nulla excepturi esse? Quasi <i class="fa-solid fa-quote-right"></i></p>
-                    </span>
-                    <span>
-                        <h3> lois wlly</h3>
-                    </span>
-                </div>
-            </section>
-        </section>
+        </div>
         <section class="test__bot">
-            <ol>
-                <li id="active"></li>
-                <li></li>
-                <li></li>
+            <ol class="test__dot">
+                <li class="dot--item test--active" data-index = "0"></li>
+                <li class="dot--item" data-index = "1"></li>
+                <li class="dot--item" data-index = "2"></li>
             </ol>
         </section>
     </section>
@@ -175,10 +177,11 @@
         <h1>Newsletter</h1>
         <h2>About the best offer</h2>
         <div id="news--email">
-            <input id="email" type="email" placeholder="Your email...">
-            <input id="button" type="button" value="Subscrible">
+            <input class="email" type="email" placeholder="Your email...">
+            <input class="button" type="button" value="Subscrible">
         </div>
         <p>Quis autem vel eum iure reprehderit.Etiam sed odio consequat tristique elit sed, molestie nulla. velit sagittis vehicula. Duis posuere</p>
     </section>
+    <script src="../src/js/script2.js"></script>
 </body>
 </html>

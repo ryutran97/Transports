@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./src/css/style.css">
     <script src="https://kit.fontawesome.com/4c13d54579.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
     <title>Transports</title>
 </head>
 <body>
@@ -20,9 +21,9 @@
                 <label for="toggle"><i class="fa-solid fa-bars"></i></label>
                 <input type="checkbox" id="toggle">
                 <ul class="menu">
-                    <li id="home"><a href="./index.html"><i class="fa-solid fa-house"></i>Home</a></li>
-                    <li><a href="./pages/about.html"><i class="fa-solid fa-circle-info"></i>About</a></li>
-                    <li><a href="./pages/services.html"><i class="fa-solid fa-gears"></i>Services</a></li>
+                    <li class="home"><a  href="./index.html"><i class="fa-solid fa-house"></i><p>Home</p></a></li>
+                    <li><a href="./pages/about.html"><i class="fa-solid fa-circle-info"></i><p>About</p></a></li>
+                    <li><a href="./pages/services.html"><i class="fa-solid fa-gears"></i><p>Services</p></a></li>
                     <li class="dropdown">
                         <a id="drop-btn" href="#"></span></a>
                         <input type="checkbox" id="toggle-2" />
@@ -38,14 +39,39 @@
         </aside>
     </header>
     <section class="slider">
-        <div class="slider__main">
-            <h2>The</h2>
-            <h1>INTERNATIONAL
-                AIRWAY</h1>
-            <p>Quis autem vel eum iure reprehderit.Etiam sed odio consequat tristique elit sed, molestie nulla. velit sagittis vehicula. Duis posuere</p>
+        <div class="slider__wraper">
+            <div class="slider__main">
+                <div class="item active--slide">
+                    <img src="./images/b1.jpg">
+                    <h2>The</h2>
+                    <h1>INTERNATIONAL
+                        AIRWAY</h1>
+                    <p>Quis autem vel eum iure reprehderit.Etiam sed odio consequat tristique elit sed, molestie nulla. velit sagittis vehicula. Duis posuere</p>
+                </div>
+                <div class="item">
+                    <img src="./images/b2.jpg">
+                    <h2>The</h2>
+                    <h1>INTERNATIONAL
+                        AIRWAY</h1>
+                    <p>Quis autem vel eum iure reprehderit.Etiam sed odio consequat tristique elit sed, molestie nulla. velit sagittis vehicula. Duis posuere</p>
+                </div>
+                <div class="item">
+                    <img src="./images/b3.jpg">
+                    <h2>The</h2>
+                    <h1>INTERNATIONAL
+                        AIRWAY</h1>
+                    <p>Quis autem vel eum iure reprehderit.Etiam sed odio consequat tristique elit sed, molestie nulla. velit sagittis vehicula. Duis posuere</p>
+                </div>
+            </div>
         </div>
-        <img id="left" src="./images/left-arrow.png" alt="left-slider">
-        <img id="right" src="./images/right-arrow.png" alt="right-slider">
+        <img class="left" src="./images/left-arrow.png" alt="left-slider">
+        <img class="right" src="./images/right-arrow.png" alt="right-slider">
+        <!-- <section class="sliderbg"></section>
+        <section class="slidernav">
+            <img id="left" src="./images/left-arrow.png" alt="left-slider">
+            <img id="right" src="./images/right-arrow.png" alt="right-slider">
+        </section>
+    </section> -->
     </section>
     <section class="whatwedo">
         <section class="whatwedo__top">
@@ -157,52 +183,54 @@
     </section>
     <section class="testimonials">
         <h1>Testimonials</h1>
-        <section class="test__main">
-            <section id="item--1">
-                <div id="top">
-                    <img src="./images/t3.jpg">
+        <div class="test__wapper">
+            <section class="test__main">
+                <div class="item">
+                    <div id="top">
+                        <img src="./images/t1.jpg">
+                    </div>
+                    <div id="bot">
+                        <span>
+                            <p><i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, minima maiores impedit facere dolorum error aliquid saepe itaque similique veritatis ex nihil sequi suscipit, recusandae assumenda nulla excepturi esse? Quasi <i class="fa-solid fa-quote-right"></i></p>
+                        </span>
+                        <span>
+                            <h3> lois wlly</h3>
+                        </span>
+                    </div>
                 </div>
-                <div id="bot">
-                    <span>
-                        <p><i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, minima maiores impedit facere dolorum error aliquid saepe itaque similique veritatis ex nihil sequi suscipit, recusandae assumenda nulla excepturi esse? Quasi <i class="fa-solid fa-quote-right"></i></p>
-                    </span>
-                    <span>
-                        <h3> lois wlly</h3>
-                    </span>
+                <div class="item">
+                    <div id="top">
+                        <img src="./images/t2.jpg">
+                    </div>
+                    <div id="bot">
+                        <span>
+                            <p><i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, minima maiores impedit facere dolorum error aliquid saepe itaque similique veritatis ex nihil sequi suscipit, recusandae assumenda nulla excepturi esse? Quasi <i class="fa-solid fa-quote-right"></i></p>
+                        </span>
+                        <span>
+                            <h3> lois wlly</h3>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div id="top">
+                        <img src="./images/t3.jpg">
+                    </div>
+                    <div id="bot">
+                        <span>
+                            <p><i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, minima maiores impedit facere dolorum error aliquid saepe itaque similique veritatis ex nihil sequi suscipit, recusandae assumenda nulla excepturi esse? Quasi <i class="fa-solid fa-quote-right"></i></p>
+                        </span>
+                        <span>
+                            <h3> lois wlly</h3>
+                        </span>
+                    </div>
                 </div>
             </section>
-            <section id="item--2">
-                <div id="top">
-                    <img src="./images/t2.jpg">
-                </div>
-                <div id="bot">
-                    <span>
-                        <p><i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, minima maiores impedit facere dolorum error aliquid saepe itaque similique veritatis ex nihil sequi suscipit, recusandae assumenda nulla excepturi esse? Quasi <i class="fa-solid fa-quote-right"></i></p>
-                    </span>
-                    <span>
-                        <h3> lois wlly</h3>
-                    </span>
-                </div>
-            </section>
-            <section id="item--3">
-                <div id="top">
-                    <img src="./images/t3.jpg">
-                </div>
-                <div id="bot">
-                    <span>
-                        <p><i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, minima maiores impedit facere dolorum error aliquid saepe itaque similique veritatis ex nihil sequi suscipit, recusandae assumenda nulla excepturi esse? Quasi <i class="fa-solid fa-quote-right"></i></p>
-                    </span>
-                    <span>
-                        <h3> lois wlly</h3>
-                    </span>
-                </div>
-            </section>
-        </section>
+        </div>
         <section class="test__bot">
-            <ol>
-                <li id="active"></li>
-                <li></li>
-                <li></li>
+            <ol class="test__dot">
+                <li class="dot--item test--active" data-index = "0"></li>
+                <li class="dot--item" data-index = "1"></li>
+                <li class="dot--item" data-index = "2"></li>
             </ol>
         </section>
     </section>
@@ -210,50 +238,53 @@
         <h1>Newsletter</h1>
         <h2>About the best offer</h2>
         <div id="news--email">
-            <input id="email" type="email" placeholder="Your email...">
-            <input id="button" type="button" value="Subscrible">
+            <input class="email" type="email" placeholder="Your email...">
+            <input class="button" type="button" value="Subscrible">
         </div>
         <p>Quis autem vel eum iure reprehderit.Etiam sed odio consequat tristique elit sed, molestie nulla. velit sagittis vehicula. Duis posuere</p>
     </section>
     <section class="partner">
         <h1>Our Partners</h1>
-        <section class="main">
-            <div class="main__left">
-                <div id="item--1">
-                    <img src="./images/logo1.jpg" alt="">
+        <section class="partner__wapper">
+            <div class="partner__main">
+                <div class="item">
+                    <div id="item--1">
+                        <img src="./images/logo1.jpg" alt="">
+                    </div>
+                    <div id="item--2">
+                        <img src="./images/logo2.jpg" alt="">
+                    </div>
+                    <div id="item--3">
+                        <img src="./images/logo3.jpg" alt="">
+                    </div>
+                    <div id="item--4">
+                        <img src="./images/logo1.jpg" alt="">
+                    </div>
                 </div>
-                <div id="item--2">
-                    <img src="./images/logo2.jpg" alt="">
-                </div>
-                <div id="item--3">
-                    <img src="./images/logo3.jpg" alt="">
-                </div>
-                <div id="item--4">
-                    <img src="./images/logo1.jpg" alt="">
-                </div>
-            </div>
-            <div class="main__right">
-                <div id="item--1">
-                    <img src="./images/logo1.jpg" alt="">
-                </div>
-                <div id="item--2">
-                    <img src="./images/logo2.jpg" alt="">
-                </div>
-                <div id="item--3">
-                    <img src="./images/logo3.jpg" alt="">
-                </div>
-                <div id="item--4">
-                    <img src="./images/logo1.jpg" alt="">
+                <div class="item">
+                    <div id="item--1">
+                        <img src="./images/logo1.jpg" alt="">
+                    </div>
+                    <div id="item--2">
+                        <img src="./images/logo3.jpg" alt="">
+                    </div>
+                    <div id="item--3">
+                        <img src="./images/logo1.jpg" alt="">
+                    </div>
+                    <div id="item--4">
+                        <img src="./images/logo2.jpg" alt="">
+                    </div>
                 </div>
             </div>
         </section>
         <section class="bot">
             <ol>
-                <li id="active"></li>
-                <li></li>
-                <li></li>
+                <li class="dot--partner partner--active" data-index="0"></li>
+                <li class="dot--partner" data-index="1"></li>
             </ol>
         </section>
     </section>
+    <script src="./src/js/script.js"></script>
+    <!-- <script src="../src/js/script2.js"></script> -->
 </body>
 </html>
