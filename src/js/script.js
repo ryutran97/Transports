@@ -66,7 +66,6 @@ window.addEventListener("load", function(){//load het moi chay js
 
 
     //testimonial
-    let index1 = 0
     let dotTest = document.querySelectorAll(".dot--item");
     let testItem = document.querySelectorAll(".test__main >.item");
     let testItemWidth = testItem[0].offsetWidth;
@@ -74,13 +73,13 @@ window.addEventListener("load", function(){//load het moi chay js
     console.log(testItemWidth);
     console.log(testItem);
     [...dotTest].forEach(item => item.addEventListener("click", function(e){// tao vong lap cho mang i co event click
-        let testIndex = parseInt(e.target.dataset.index1);//lay data index ttong mang
+        let testIndex = parseInt(e.target.dataset.index);//lay data index ttong mang
         [...dotTest].forEach(el => el.classList.remove("test--active"));
         e.target.classList.add("test--active");
         // console.log(testIndex);
-        index1 = testIndex; // cho cai index bang cai dataindex li
+        index = testIndex; // cho cai index bang cai dataindex li
         // console.log(index);
-        testMain.style =`transform: translateX(${-1 * index1 * testItemWidth}px)`;
+        testMain.style =`transform: translateX(${-1 * index * testItemWidth}px)`;
     } ));
 
 
@@ -92,13 +91,13 @@ window.addEventListener("load", function(){//load het moi chay js
     // console.log(partnerItemWidth);
     // console.log(partnerItem);
     [...dotPartner].forEach(item =>item.addEventListener("click", function(e){
-        let partnerIndex = parseInt(e.target.dataset.index1);
+        let partnerIndex = parseInt(e.target.dataset.index);
         // console.log(partnerIndex);
         [...dotPartner].forEach(el => el.classList.remove("partner--active"));
         e.target.classList.add("partner--active");
-        index1 = partnerIndex;
-        console.log(index1);
-        partnerMain.style = `transform: translateX(${-1 * index1 * partnerItemWidth}px)`
+        index = partnerIndex;
+        console.log(index);
+        partnerMain.style = `transform: translateX(${-1 * index * partnerItemWidth}px)`
     }));
 
     //kiemtra email
