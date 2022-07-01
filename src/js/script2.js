@@ -1,4 +1,4 @@
-console.log("asdasd");
+console.log("sadas");
 //slider home
 
 window.addEventListener("load", function(){//load het moi chay js
@@ -19,6 +19,26 @@ window.addEventListener("load", function(){//load het moi chay js
         // console.log(index);
         testMain.style =`transform: translateX(${-1 * index * testItemWidth}px)`;
     } ));
+    //counter
+    let counters = document.querySelectorAll(".counter");
+    console.log(counters)
+    counters.forEach((counter) =>{
+        counter.innerText = '0';//sua content  = 0 cho tat ca cac class counter
+
+        let updateCounter = () =>{
+            let target = Number(counter.getAttribute("data-target"));//lay attri tu dat  data-target, ep ve number
+            console.log(typeof target, target);// kiem tra kieu du lieu
+            let dem = Number(counter.innerText);
+            console.log("dem",dem);
+            let tang = target / 500;
+            console.log("tang",tang);
+            if ( dem< target){
+                counter.innerText  = `${Math.ceil(dem + tang)}`;
+                setTimeout(updateCounter, 0.25);
+            }
+        };
+        updateCounter();
+    });
 
 
     //partner
@@ -65,4 +85,6 @@ window.addEventListener("load", function(){//load het moi chay js
         });
     }
     kiemTraEmail();
+
+   
 })

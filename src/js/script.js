@@ -101,30 +101,51 @@ window.addEventListener("load", function(){//load het moi chay js
     }));
 
     //kiemtra email
-    function validateEmail(email) {
-        let count = 0;
-        for (let i = 0; i < email.length; i++) {
-          if (email[i] == "@") count++;
-        }
-        return count == 1;
-      }
-    function kiemTraEmail(){
-        const subBtn = document.getElementsByClassName("button")[0];
-        console.log(subBtn);// k the console
-        subBtn.addEventListener("click", function(){
-            let inputs = document.getElementsByTagName("input")
-            let email = inputs[0];
-            // let email = document.getElementsByClassName("email");
-            console.log(email);
-            let emailValue = email.value;
-            let ketQuaKT = validateEmail(emailValue);
-            if(ketQuaKT === true){
-                window.alert("Dang ki thanh cong");
-            }
-            else{
-                window.alert("Email chua dung");
-            }
-        });
-    }
-    kiemTraEmail();
+    
+    //   function setValidateFormEvent() {
+    //     const signBtn = document.getElementsByClassName("button")[0];
+    //     console.log(signBtn);
+    //     signBtn.addEventListener("click", function () {
+    //     //   // Hãy viết code của bạn ở đây ...
+      
+    //     //   // buoc 1: lay the input cua email
+    //     //   // buoc 2: lay gia tri khi nhap vao
+    //     //   // buoc 3: goi ham kiem tra email
+    //     //   // buoc 4: xu li khi ham kiem tra tra true hoac false
+          
+    //     //   let inputs = document.getElementsByTagName("input");
+    //     //   let email = inputs[0];
+    //     //   let emailValue = email.value;
+    //     //   let ketQuaKiemTraEmail = validateEmail(emailValue);
+    //     //   let thongBaoLoiEmail = document.getElementById("err-email");
+    //     //   if (ketQuaKiemTraEmail === true) {
+    //     //     thongBaoLoiEmail.innerHTML = "<span style='color: green'>Email hợp lệ</span>";
+    //     //   }
+    //     //   else {
+    //     //     thongBaoLoiEmail.innerHTML = "Email chưa đúng";
+    //     //   }
+    //         function validateEmail(){
+    //             let form = document.getElementById('news--email');
+    //             console.log(form);
+    //             let email = document.getElementsByClassName(".email").value;
+    //             console.log(email);
+    //             let pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    //             let err = document.getElementById('err-email');
+    //             if(email.match(pattern)){
+    //                 form.classList.add("valid");
+    //                 form.classList.remove("invalid");
+    //                 err.innerHTML ="adasda";
+    //             }
+    //             else{
+    //                 form.classList.add("invalid");
+    //                 form.classList.remove("valid");
+    //                 err.innerHTML ="zxdzxdzxdzxdzx";
+    //             }
+    //         };
+    //     });
+      
+    //   }
+    //   setValidateFormEvent();
+    // // console.log(kiemTraEmail);
+
 })
